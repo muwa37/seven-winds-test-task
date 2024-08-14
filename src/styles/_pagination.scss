@@ -1,0 +1,32 @@
+.pagination {
+  margin-top: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.6rem;
+
+  &__buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__button {
+    background-color: #33333375;
+    border: none;
+    color: #cccccc;
+    font-size: 2.4rem;
+    border-radius: 0.4rem;
+    padding: 0.1rem 1rem;
+    transition: var(--duration-primary);
+
+    &:hover {
+      color: whitesmoke;
+    }
+
+    &--disabled {
+      filter: brightness(60%);
+    }
+  }
+}

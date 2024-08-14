@@ -19,27 +19,25 @@ export default function Header() {
   const [activeEl, setActiveEl] = useState(texts[0]);
 
   return (
-    <header className='header'>
-      <nav>
-        <ul className='header__list'>
-          {icons.map(icon => (
-            <li key={icon.name} style={icon.rotate} className='header__icon header__item'>
-              {icon.icon}
-            </li>
-          ))}
+    <nav className='nav'>
+      <ul className='nav__list'>
+        {icons.map(icon => (
+          <li key={icon.name} style={icon.rotate} className='nav__icon nav__item'>
+            {icon.icon}
+          </li>
+        ))}
 
-          {texts.map((text, i) => (
-            <li
-              key={text}
-              style={i === 0 ? { marginLeft: '1.6rem' } : {}}
-              className={`${activeEl === text ? 'header__item--active' : ''} header__text header__item`}
-              onClick={() => setActiveEl(text)}
-            >
-              {text}
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </header>
+        {texts.map((text, i) => (
+          <li
+            key={text}
+            style={i === 0 ? { marginLeft: '1.6rem' } : {}}
+            className={`${activeEl === text ? 'nav__item--active' : ''} nav__text nav__item`}
+            onClick={() => setActiveEl(text)}
+          >
+            {text}
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }
